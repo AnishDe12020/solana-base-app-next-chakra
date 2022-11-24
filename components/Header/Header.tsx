@@ -1,10 +1,5 @@
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import {
-  HStack,
-  IconButton,
-  useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { HStack, IconButton, useColorMode } from "@chakra-ui/react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const Header = () => {
