@@ -1,9 +1,7 @@
-import { Box, Button, Flex, Heading, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import Head from "next/head";
 
 const Home = () => {
-  const { toggleColorMode } = useColorMode();
-
   return (
     <Box>
       <Head>
@@ -12,7 +10,6 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex direction="column" alignItems="center" w="100vw" h="100vh" p="16">
-        <Button onClick={toggleColorMode}>Toggle Color Mode</Button>
         <Heading as="h1">Solana Base App (Next.js + Chakra UI)</Heading>
       </Flex>
     </Box>
