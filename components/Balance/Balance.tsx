@@ -5,6 +5,8 @@ import {
   forwardRef,
   useToast,
   VStack,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { WalletNotConnectedError } from "@solana/wallet-adapter-base";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
@@ -69,7 +71,13 @@ const Balance = forwardRef<StackProps, "div">((props, ref) => {
   }, [publicKey, connection, checkBalance, toast]);
 
   return (
-    <VStack gap={8} ref={ref} {...props}>
+    <VStack
+      gap={8}
+      ref={ref}
+      {...props}
+      bg={useColorModeValue("gray.200", "gray.700")}
+      rounded="xl"
+    >
       <Text fontSize="lg" fontWeight="semibold">
         Current Balance: {balance} SOL
       </Text>

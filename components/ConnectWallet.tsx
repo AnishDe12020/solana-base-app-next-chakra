@@ -16,7 +16,7 @@ const ConnectWallet = forwardRef<ButtonProps, "button">((props, ref) => {
       },
     },
   });
-  return <ChakraConnectWallet {...props} />;
+  return <ChakraConnectWallet ref={ref} {...props} />;
 });
 
 export default ConnectWallet;
