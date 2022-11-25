@@ -14,8 +14,8 @@ import { useCallback, useEffect, useState } from "react";
 const Balance = forwardRef<StackProps, "div">((props, ref) => {
   const { connection } = useConnection();
   const { publicKey } = useWallet();
-  const [balance, setBalance] = useState(0);
 
+  const [balance, setBalance] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
   const toast = useToast();

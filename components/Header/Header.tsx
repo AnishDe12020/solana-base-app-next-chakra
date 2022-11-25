@@ -1,6 +1,7 @@
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { HStack, IconButton, useColorMode } from "@chakra-ui/react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import ConnectWallet from "../ConnectWallet";
 
 const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -22,7 +23,7 @@ const Header = () => {
         onClick={toggleColorMode}
       />
 
-      <WalletMultiButton />
+      <ConnectWallet />
     </HStack>
   );
 };
